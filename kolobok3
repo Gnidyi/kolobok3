@@ -1,0 +1,37 @@
+#include <ctype.h>
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+    int season;
+
+    do
+    {
+        season = get_int("Ваш номер: ");
+    }
+    while((season <= 1) || (season >= 12));
+
+    if ((season >= 1) && (season <= 2))
+    {
+        printf("It's winter\n");
+    }
+
+    else if(season == 12)
+    {
+        printf("Its winter\n");
+    }
+    else if ((season >= 3) && (season <= 5))
+    {
+        printf("Its spring\n");
+    }
+    else if ((season >= 6) && (season <= 8))
+    {
+        printf("Its summer\n");
+    }
+    else if ((season >= 9) && (season <= 11))
+        {
+            printf("Its autumn\n");
+        }
+
+}
